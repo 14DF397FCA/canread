@@ -45,10 +45,8 @@ void SpeedVehicle(const unsigned char data[8]) {
 
 void Speed(const unsigned char data[8]) {
     if (data[2] == 0x0C) {
-        Serial.println("RPM");
         SpeedEngine(data);
     } else if (data[2] == 0x0D) {
-        Serial.println("KMH");
         SpeedVehicle(data);
     }
 }
